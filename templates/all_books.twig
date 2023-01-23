@@ -1,0 +1,11 @@
+{% extends "base.twig" %}
+
+{% block body %}
+    <h1>Список Книг</h1>
+
+    <ul>
+        {% for book in books %}
+            <li>{{ book.getName() }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
