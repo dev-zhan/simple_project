@@ -1,0 +1,37 @@
+{% extends "base.twig" %}
+
+{% block body %}
+    <h1>Новая книга:</h1>
+
+    <form action="/books" method="post">
+        <div>
+            <label>
+                Название
+                <input type="text" name="book[name]" value="{{ data.name ?? '' }}">
+            </label>
+        </div>
+        <br>
+        <div>
+            <label>
+                Автор
+                <input type="text" name="book[author_id]" value="{{ data.author_id ?? '' }}">
+            </label>
+        </div>
+        <br>
+        <div>
+            <label>
+                Описание
+                <input type="text" name="book[description]" value="{{ data.description ?? '' }}">
+            </label>
+        </div>
+        <br>
+        <div>
+            <label>
+                Количество страниц
+                <input type="number" name="book[page_count]" value="{{ data.page_count ?? '' }}">
+            </label>
+        </div>
+        <br>
+        <input type="submit" value="Сохранить">
+    </form>
+{% endblock %}
