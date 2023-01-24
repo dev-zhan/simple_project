@@ -1,4 +1,5 @@
 <?php
+namespace App\Model\Repository;
 
 use App\Model\Book;
 
@@ -27,7 +28,7 @@ class BookRepo
     public function getViewId($id){
 
         $pdo = $this->connectDB();
-        $query = "SELECT id, title, description, price FROM adverts WHERE id = ?";
+        $query = "SELECT id, name, author_id,description,page_count FROM books WHERE id = ?";
         $stmt = $pdo->prepare($query);
         $stmt->execute(array($id));
 
