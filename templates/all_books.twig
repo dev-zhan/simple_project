@@ -6,6 +6,8 @@
     <ul>
         {% for book in books %}
             <li>{{ book.getName() }}</li>
+            <li>{{ book.getDescription() }}</li>
+            <li>{{ book.page_count() }}</li>
         {% endfor %}
     </ul>
 {% endblock %}
